@@ -4,7 +4,7 @@
       <img :src="require('@/assets/images/microwave.svg')" />
     </div>
 
-    <WattageSelect />
+    <WattageSelect :wattage="wattage" />
   </div>
 </template>
 
@@ -16,6 +16,11 @@ export default defineComponent({
   name: "Home",
   components: {
     WattageSelect,
+  },
+  setup() {
+    return {
+      wattage: 1000,
+    };
   },
 });
 </script>

@@ -1,8 +1,13 @@
 <template>
   <div class="wattage-select">
     <span class="wattage-description">使うレンジ</span>
-    <div class="wattage-container">
-      <div v-for="item in list" :key="item.id" class="wattage-item">
+    <div id="wattage-container" class="wattage-container">
+      <div
+        v-for="item in list"
+        :key="item.id"
+        :id="`wattage-${item.id}`"
+        class="wattage-item"
+      >
         {{ item.name }}
       </div>
     </div>
@@ -11,10 +16,27 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, nextTick } from "vue";
 
 export default defineComponent({
-  setup() {
+  props: {
+    wattage: {
+      type: Number,
+      required: true,
+    },
+  },
+  setup(props) {
+    nextTick(() => {
+      const containerElem = document.getElementById("wattage-container");
+      if (containerElem === null) throw new Error();
+
+      const itemElem = document.getElementById(`wattage-${props.wattage}`);
+      if (itemElem === null) throw new Error();
+
+      const itemRect = itemElem.getBoundingClientRect();
+      containerElem.scrollTo(0, itemRect.top - containerElem.offsetTop);
+    });
+
     return {
       list: [
         1500, 1400, 1300, 1200, 1000, 900, 800, 700, 600, 500, 400, 300, 200,
