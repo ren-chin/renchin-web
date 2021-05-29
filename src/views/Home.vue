@@ -4,12 +4,12 @@
       <img :src="require('@/assets/images/microwave.svg')" />
     </div>
 
-    <WattageSelect :wattage="wattage" />
+    <WattageSelect v-model:wattage="wattage" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import WattageSelect from "@/components/atoms/WattageSelect.vue";
 
 export default defineComponent({
@@ -18,8 +18,10 @@ export default defineComponent({
     WattageSelect,
   },
   setup() {
+    const wattage = ref(1000);
+
     return {
-      wattage: 1000,
+      wattage,
     };
   },
 });

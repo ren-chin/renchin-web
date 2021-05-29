@@ -17,6 +17,16 @@
 
 <script lang="ts">
 import { defineComponent, nextTick } from "vue";
+import { debounce } from "lodash";
+
+const list = [
+  1500, 1400, 1300, 1200, 1000, 900, 800, 700, 600, 500, 400, 300, 200,
+].map((wattage) => {
+  return {
+    id: wattage,
+    name: `${wattage}`,
+  };
+});
 
 export default defineComponent({
   props: {
@@ -25,7 +35,8 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(props) {
+  emits: ["update:wattage"],
+  setup(props, { emit }) {
     nextTick(() => {
       const containerElem = document.getElementById("wattage-container");
       if (containerElem === null) throw new Error();
@@ -35,17 +46,22 @@ export default defineComponent({
 
       const itemRect = itemElem.getBoundingClientRect();
       containerElem.scrollTo(0, itemRect.top - containerElem.offsetTop);
+
+      const currentWattage = { value: props.wattage };
+      containerElem.addEventListener(
+        "scroll",
+        debounce(() => {
+          const wattage = list[Math.round(containerElem.scrollTop / 30)].id;
+          if (wattage === currentWattage.value) return;
+
+          emit("update:wattage", wattage);
+          currentWattage.value = wattage;
+        }, 500)
+      );
     });
 
     return {
-      list: [
-        1500, 1400, 1300, 1200, 1000, 900, 800, 700, 600, 500, 400, 300, 200,
-      ].map((wattage) => {
-        return {
-          id: wattage,
-          name: `${wattage}`,
-        };
-      }),
+      list,
     };
   },
 });
