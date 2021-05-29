@@ -7,6 +7,8 @@
 </template>
 
 <style lang="scss">
+@import "./assets/stylesheets/reset";
+
 #app {
   font-family: heisei-maru-gothic-std, sans-serif;
   font-weight: 400;
