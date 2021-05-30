@@ -10,12 +10,14 @@
       <Recipe v-model:wattage="recipeWattage" v-model:time="recipeTime" />
     </div>
 
-    <button class="submit-button">変換！</button>
+    <div class="result">
+      <span> {{ resultMinute }}分{{ resultSecond }}秒 </span>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
 import WattageSelect from "@/components/WattageSelect.vue";
 import Recipe from "@/components/Recipe.vue";
 
@@ -30,10 +32,24 @@ export default defineComponent({
     const recipeWattage = ref(600);
     const recipeTime = ref(90);
 
+    const resultTime = computed(() => {
+      const time =
+        (recipeTime.value * recipeWattage.value) / microwaveWattage.value;
+      return Math.round(time / 10) * 10;
+    });
+    const resultMinute = computed(() => {
+      return Math.floor(resultTime.value / 60);
+    });
+    const resultSecond = computed(() => {
+      return resultTime.value % 60;
+    });
+
     return {
       microwaveWattage,
       recipeWattage,
       recipeTime,
+      resultMinute,
+      resultSecond,
     };
   },
 });
@@ -54,10 +70,13 @@ export default defineComponent({
   border-radius: 8px;
 }
 
-.submit-button {
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 152px;
   height: 152px;
-  padding-left: 16px;
+  margin: 0 auto;
   font-family: keifont, sans-serif;
   font-size: 22px;
   color: #fff;
