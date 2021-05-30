@@ -12,7 +12,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "lint:style": "stylelint \"**/*.vue\" \"**/*.css\" \"**/*.scss\" --fix"
+    "lint:style": "stylelint \"**/*.vue\" \"**/*.css\" \"**/*.scss\" --fix",
+    "deploy": "gh-pages -d dist"
   },
   "main": "index.js",
   "dependencies": {
@@ -44,6 +45,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "gh-pages": "^3.2.0",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
     "sass": "^1.26.5",
