@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d0474fc564ed6f130d0",
-    "url": "/renchin-web/css/app.473d6713.css"
+    "revision": "a553008079d44f5f1b2b",
+    "url": "/renchin-web/css/app.74cca628.css"
   },
   {
     "revision": "3d8226e3dfaf3216220f31ced0ca61cd",
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/renchin-web/img/microwave.03bb03f6.svg"
   },
   {
-    "revision": "7e33b2eed873419242d4b6a22a56fa19",
+    "revision": "f2e60afc39970bfbc027118d65e6aa1f",
     "url": "/renchin-web/index.html"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/renchin-web/js/about.122f8ab5.js"
   },
   {
-    "revision": "4d0474fc564ed6f130d0",
-    "url": "/renchin-web/js/app.47122b70.js"
+    "revision": "a553008079d44f5f1b2b",
+    "url": "/renchin-web/js/app.7b0105d2.js"
   },
   {
-    "revision": "2e85036e92fc7d87216d",
-    "url": "/renchin-web/js/chunk-vendors.d0aad0ae.js"
+    "revision": "47e7cb214f8d5ff02d01",
+    "url": "/renchin-web/js/chunk-vendors.03f79f75.js"
   },
   {
     "revision": "02b5d88d5e13e94a7a5fc5fe3d48b359",
