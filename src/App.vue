@@ -8,12 +8,12 @@
 
 #app {
   font-family: heisei-maru-gothic-std, sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  color: #2c3e50;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
 #nav {

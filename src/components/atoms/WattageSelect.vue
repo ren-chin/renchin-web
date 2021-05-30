@@ -70,31 +70,31 @@ export default defineComponent({
 <style lang="scss" scoped>
 .wattage-select {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: #ea5541;
 }
 
 .wattage-description {
-  font-size: 22px;
-  margin-right: 8px;
   height: 22px;
+  margin-right: 8px;
+  font-size: 22px;
 }
 
 .wattage-unit {
-  font-size: 26px;
-  margin-left: 4px;
   height: 30px;
+  margin-left: 4px;
+  font-size: 26px;
 }
 
 .wattage-container {
   height: 52px;
   padding: 12px;
-  background: #ea554126;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   cursor: pointer;
+  background: #ea554126;
   border-radius: 8px;
+  scroll-snap-type: y mandatory;
 }
 
 .wattage-item {
