@@ -62,6 +62,10 @@
     "*.{js,jsx,vue,ts,tsx}": [
       "vue-cli-service lint",
       "git add"
+    ],
+    "*.{css,scss,vue}": [
+      "stylelint \"**/*.vue\" \"**/*.css\" \"**/*.scss\" --fix",
+      "git add"
     ]
   },
   "readme": "ERROR: No README data found!"
