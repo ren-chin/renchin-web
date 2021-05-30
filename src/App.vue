@@ -4,6 +4,7 @@
 
 <style lang="scss">
 @import "./assets/stylesheets/reset";
+@import "./assets/stylesheets/keifont";
 
 #app {
   font-family: heisei-maru-gothic-std, sans-serif;
