@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.92d922db4b5481a54097d468332eab5c.js"
+  "/renchin-web/precache-manifest.99475c2383dfcadd88b60471d13e3ef4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "renchin-web"});
