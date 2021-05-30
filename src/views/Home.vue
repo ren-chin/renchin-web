@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import WattageSelect from "@/components/atoms/WattageSelect.vue";
+import WattageSelect from "@/components/WattageSelect.vue";
 
 export default defineComponent({
   name: "Home",
