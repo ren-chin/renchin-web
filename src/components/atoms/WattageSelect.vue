@@ -74,16 +74,19 @@ export default defineComponent({
   align-items: center;
   color: #ea5541;
 }
+
 .wattage-description {
   font-size: 22px;
   margin-right: 8px;
   height: 22px;
 }
+
 .wattage-unit {
   font-size: 26px;
   margin-left: 4px;
   height: 30px;
 }
+
 .wattage-container {
   height: 52px;
   padding: 12px;
@@ -93,6 +96,7 @@ export default defineComponent({
   cursor: pointer;
   border-radius: 8px;
 }
+
 .wattage-item {
   height: 30px;
   font-size: 26px;
