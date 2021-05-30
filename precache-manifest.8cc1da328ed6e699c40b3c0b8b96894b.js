@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0540a3c2e50973795b12",
-    "url": "/renchin-web/css/app.ad14d8e5.css"
+    "revision": "4d0474fc564ed6f130d0",
+    "url": "/renchin-web/css/app.473d6713.css"
   },
   {
     "revision": "3d8226e3dfaf3216220f31ced0ca61cd",
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/renchin-web/img/microwave.03bb03f6.svg"
   },
   {
-    "revision": "0fdf99b461e812a826e28b4234428367",
+    "revision": "7e33b2eed873419242d4b6a22a56fa19",
     "url": "/renchin-web/index.html"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/renchin-web/js/about.122f8ab5.js"
   },
   {
-    "revision": "0540a3c2e50973795b12",
-    "url": "/renchin-web/js/app.9abb6900.js"
+    "revision": "4d0474fc564ed6f130d0",
+    "url": "/renchin-web/js/app.47122b70.js"
   },
   {
     "revision": "2e85036e92fc7d87216d",
