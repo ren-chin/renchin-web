@@ -5,6 +5,8 @@
     </div>
 
     <WattageSelect v-model:wattage="wattage" />
+
+    <button class="submit-button">変換！</button>
   </div>
 </template>
 
@@ -32,5 +34,18 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   padding: 56px;
+}
+
+.submit-button {
+  width: 152px;
+  height: 152px;
+  padding-left: 16px;
+  margin-top: 32px;
+  font-family: keifont, sans-serif;
+  font-size: 22px;
+  color: #fff;
+  background: #ea5541;
+  border: none;
+  border-radius: 50%;
 }
 </style>
