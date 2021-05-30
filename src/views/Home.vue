@@ -6,6 +6,10 @@
 
     <WattageSelect v-model:wattage="microwaveWattage" />
 
+    <div class="recipe-container">
+      <Recipe v-model:wattage="recipeWattage" v-model:time="recipeTime" />
+    </div>
+
     <button class="submit-button">変換！</button>
   </div>
 </template>
@@ -13,17 +17,23 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import WattageSelect from "@/components/WattageSelect.vue";
+import Recipe from "@/components/Recipe.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     WattageSelect,
+    Recipe,
   },
   setup() {
     const microwaveWattage = ref(1000);
+    const recipeWattage = ref(600);
+    const recipeTime = ref(90);
 
     return {
       microwaveWattage,
+      recipeWattage,
+      recipeTime,
     };
   },
 });
@@ -34,6 +44,14 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   padding: 56px;
+}
+
+.recipe-container {
+  width: 80vw;
+  padding: 36px;
+  margin: 40px auto;
+  border: 4px solid #ea554199;
+  border-radius: 8px;
 }
 
 .submit-button {
