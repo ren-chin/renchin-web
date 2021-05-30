@@ -58,7 +58,6 @@ export default defineComponent({
   width: 152px;
   height: 152px;
   padding-left: 16px;
-  margin-top: 32px;
   font-family: keifont, sans-serif;
   font-size: 22px;
   color: #fff;
