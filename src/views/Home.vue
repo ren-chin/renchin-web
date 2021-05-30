@@ -4,7 +4,7 @@
       <img :src="require('@/assets/images/microwave.svg')" />
     </div>
 
-    <WattageSelect v-model:wattage="wattage" />
+    <WattageSelect v-model:wattage="microwaveWattage" />
 
     <button class="submit-button">変換！</button>
   </div>
@@ -20,10 +20,10 @@ export default defineComponent({
     WattageSelect,
   },
   setup() {
-    const wattage = ref(1000);
+    const microwaveWattage = ref(1000);
 
     return {
-      wattage,
+      microwaveWattage,
     };
   },
 });
