@@ -53,7 +53,8 @@ export default defineComponent({
       containerElem.value.addEventListener(
         "scroll",
         debounce(() => {
-          if (containerElem.value === null) throw new Error();
+          if (containerElem.value === null)
+            throw new Error("not found containerElem");
 
           const itemId =
             props.list[Math.round(containerElem.value.scrollTop / 24)].id;
