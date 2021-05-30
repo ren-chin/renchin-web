@@ -59,12 +59,12 @@ export default defineComponent({
         },
       }),
       minuteList: [...Array(20)].map((_, i) => {
-        const minute = 20 - i;
+        const minute = 20 - (i + 1);
         return { id: minute, name: `${minute}` };
       }),
       minute,
-      secondList: [...Array(60)].map((_, i) => {
-        const second = 60 - i;
+      secondList: [...Array(6)].map((_, i) => {
+        const second = 60 - (i + 1) * 10;
         return { id: second, name: `${second}` };
       }),
       second,
